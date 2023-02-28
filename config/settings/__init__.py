@@ -117,12 +117,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.getenv('DATABASE_ENGINE'),
-        'NAME': os.getenv('DATABASE_NAME'),
-        'USER': os.getenv('DATABASE_USER'),
-        'PASSWORD': os.getenv('DATABASE_PASSWORD'),
-        'HOST': os.getenv('DATABASE_HOST'),
-        'PORT': os.getenv('DATABASE_PORT'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'jobs',
+        'USER': 'bobby',
+        'PASSWORD': '1234',
+        'HOST': 'ec2-3-21-254-99.us-east-2.compute.amazonaws.com',
+        'PORT': '5432',
     },
 }
 
