@@ -35,11 +35,11 @@ LOGGING = {
             'class': 'django.utils.log.AdminEmailHandler',
             'filters': ['require_debug_false']
         },
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': os.getenv('LOG_DIRECTORY'),
-        },
+        # 'file': {
+        #     'level': 'DEBUG',
+        #     'class': 'logging.FileHandler',
+        #     'filename': os.getenv('LOG_DIRECTORY'),
+        # },
     },
     'loggers': {
         '': {
@@ -48,12 +48,12 @@ LOGGING = {
             'propagate': True,
         },
         'django': {
-            'handlers': ['console', 'mail_admins', 'file', ],
+            'handlers': ['console', 'mail_admins', ],
             'level': 'DEBUG',
             'propagate': True,
         },
         'django.server': {
-            'handlers': ['console', 'mail_admins', 'file', ],
+            'handlers': ['console', 'mail_admins', ],
             'level': 'INFO',
             'propagate': False,
         },
