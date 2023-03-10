@@ -20,9 +20,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 env = environ.Env()
 env.read_env(str(BASE_DIR / '.env/.env'))
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY', 'my-secret-key-is-mysecret-key')
 DEBUG = os.getenv('DEBUG') == 'True'
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(",")
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 FRONT_END_IP = os.getenv('FRONT_END_IP')
 
 DJANGO_APPS = [
